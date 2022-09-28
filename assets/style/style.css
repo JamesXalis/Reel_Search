@@ -7,14 +7,22 @@ body{
     );
 }
 
+#logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#logo {
+    max-height: 4rem;
+}
 
-
-/* header nav { */
-    /* padding-top: 15px; */
-    /* margin-right: 20px;
+/* 
+header nav { 
+    padding-top: 15px;
+    margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px; */
-/* } */
-
+    font-size: 20px;
+}
+ */
