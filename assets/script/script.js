@@ -6,7 +6,7 @@ let genre = '';
 let actors = '';
 let awards = '';
 let plot = '';
-let poster = '';
+let posterURL = '';
 let rated = '';
 let $input = document.createElement("input");
 $input.setAttribute("type", "text");
@@ -17,8 +17,9 @@ let $uL = document.createElement("ul");
 $main.append($input);
 $main.append($button);
 $main.append($uL);
+carousel = [document.querySelector('#c1'),document.querySelector('#c2'),document.querySelector('#c3'),document.querySelector('#c4'),document.querySelector('#c5')];
 
-
+index=0;
 function getMovieData(movie) {
     let requestUrl = `http://www.omdbapi.com/?apikey=b4b72294&t=${movie}`;
 
@@ -27,22 +28,28 @@ function getMovieData(movie) {
             return response.json();
         })
         .then(function (data) {
+            console.log(data);
             title = data.Title;
             released = data.Released;
             genre = data.Genre;
             actors = data.Actors;
             awards = data.Awards;
             plot = data.Plot;
-            poster = data.Poster;
+            posterURL = data.Poster;
             rated = data.Rated;
-            movieData = [title, released, genre, actors, awards, plot, poster, rated]
+            movieData = [data.Title, data.Released, data.Genre, data.Actors, data.Awards, data.Plot, data.Rated]
             document.createElement("lI");
             for (i=0; i<movieData.length; i++) {
                 let $listItem = document.createElement("li");
                 $listItem.textContent = movieData[i]
                 $uL.append($listItem);
-                youTubeSearch(title);
             }
+            let $poster = document.createElement("img");
+            $poster.setAttribute("src", posterURL);
+            $main.append($poster);
+            carousel[index].src = posterURL;
+            index++;
+            youTubeSearch(data.Title);
         });
 }
 
@@ -84,4 +91,4 @@ function youTubeSearch(video){
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
-  });
+});
