@@ -17,6 +17,10 @@ body{
     max-height: 4rem;
 }
 
+#searchMovieBTN {
+    top: -9px;
+}
+
 /* 
 header nav { 
     padding-top: 15px;
