@@ -14,9 +14,9 @@ $input.setAttribute("placeholder", "Enter Movie Here");
 let $button = document.createElement("button")
 $button.textContent = "Search";
 let $uL = document.createElement("ul");
-$main.append($input);
-$main.append($button);
-$main.append($uL);
+// $main.append($input);
+// $main.append($button);
+// $main.append($uL);
 
 
 function getMovieData(movie) {
