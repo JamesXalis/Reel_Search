@@ -1,3 +1,4 @@
+
 function youTubeSearch(video){
     //requestUrl currently is running a search under 'matrix' that needs to be refrenced to what the user searches for ${searchTerm()}
     let requestUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=matrix_trailer&key=AIzaSyDZFKj9BobzhlYLwGozMZCE8qgQgrIcWc0`;
@@ -22,3 +23,12 @@ youTubeSearch();
 //safe search modorate/strict
 //videoDuration set to short
 //videoEmbeddable set that to true
+
+console.log ('this is loaded')
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems);
+  });
+
+
