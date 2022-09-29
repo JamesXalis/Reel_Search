@@ -8,14 +8,33 @@ body{
     );
 }
 
- /* .carousel-container-1 {
-    display:flex;
-}  */
+#carousel-2 {
+    background-color: red;
+}  
 
 #logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.welcome {
+    background-color: red;
+    border: 3px white;
+    border-style: outset;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+#welcome-title {
+    text-align: center;
+}
+
+p {
+    margin:15px;
+    font-size: 13.5pt;
+    /* background-color: #555555; */
+    
 }
 
 #logo {
@@ -33,7 +52,10 @@ body{
     border-color: white;
     border:5px white;
     border-style:outset;
+    border-radius: 12px;
 }
+
+
 
 /* 
 header nav { 
