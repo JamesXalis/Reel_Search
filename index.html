@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,12 @@
     <script defer src="./assets/script/script.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="#" id="logo-container" class="brand-logo"><img id="logo" src="./assets/Reel Movie.jpeg">Reel
-                    Search</a>
+                <a href="#" id="logo-container" class="brand-logo"><img id="logo" src="./assets/Reel Movie.jpeg">Reel Search</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="sass.html">Search</a></li>
                     <li><a href="badges.html">Genres</a></li>
@@ -25,46 +26,62 @@
         </nav>
     </header>
     <main>
-        <iframe width="100%" height="600px" class="youtubeVideo"></iframe>
         <div class="row valign-wrapper">
             <button class="btn waves-effect waves-light col s1" id="searchMovieBTN" type="submit" name="action">Search</button>
             <form class="col s11">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Enter Movie</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="text" class="validate">
+                        <label for="password">Enter Movie</label>
+                    </div>
                 </div>
-              </div>
             </form>
-          </div>
-        <section class="carousel-container-1">
+        </div>
         <div class="row">
-          <div class="col m6">
-                <div class="carousel"><section id="carousel-1">
-                    <a class="carousel-item" href="#one!"><img src="assets/Macho-Man-1.jfif"></a>
-                    <a class="carousel-item" href="#two!"><img src="assets/Macho-Man-2.jfif"></a>
-                    <a class="carousel-item" href="#three!"><img src="assets/Macho-Man-3.jfif"></a>
-                    <a class="carousel-item" href="#four!"><img src="assets/Macho-Man-4.jfif"></a>
-                    <a class="carousel-item" href="#five!"><img src="assets/Macho-Man-5.jfif"></a>
-                </div>
-          </section>
+            <iframe width="100%" height="600px" class="youtubeVideo"></iframe>
+        </div>
+        <div id="movieInfo">
+            <img id="searchedPoster" src="https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg">
+            <section>
+                <h2 id="searchedTitle">Spider-Man</h2>
+                <h4 id="searchedRelease">Release Date: xx.xx.xx</h4>
+                <p id="searchedActors">Actors: Lebron James, Lebron James, Lebron James</p>
+                <p id="searchedGenre">Genre: Action</p>
+                <p id="searchedAwards">Awards: Dundee for Best Movie</p>
+                <p id="searchedPlot">Plot: Nerd becomes cool</p>
+                <p id="searchedRated">Rated: R</p>
+            </section>
+        </div>
+        <section class="carousel-container-1">
+            <div class="row">
+                <div class="col m6">
+                    <div class="carousel">
+                        <section id="carousel-1">
+                            <a class="carousel-item" href="#one!"><img src="assets/Macho-Man-1.jfif"></a>
+                            <a class="carousel-item" href="#two!"><img src="assets/Macho-Man-2.jfif"></a>
+                            <a class="carousel-item" href="#three!"><img src="assets/Macho-Man-3.jfif"></a>
+                            <a class="carousel-item" href="#four!"><img src="assets/Macho-Man-4.jfif"></a>
+                            <a class="carousel-item" href="#five!"><img src="assets/Macho-Man-5.jfif"></a>
+                    </div>
+        </section>
         </div>
         </div>
         </section>
         <section id="carousel-2">
-        <div class="row">
-            <div class="col s6 offset-s6">
-                <div class="carousel">
-                    <a class="carousel-item" href="#one!"><img src="assets/Macho-Man-1.jfif"></a>
-                    <a class="carousel-item" href="#two!"><img src="assets/Macho-Man-2.jfif"></a>
-                    <a class="carousel-item" href="#three!"><img src="assets/Macho-Man-3.jfif"></a>
-                    <a class="carousel-item" href="#four!"><img src="assets/Macho-Man-4.jfif"></a>
-                    <a class="carousel-item" href="#five!"><img src="assets/Macho-Man-5.jfif"></a>
+            <div class="row">
+                <div class="col s6 offset-s6">
+                    <div class="carousel">
+                        <a class="carousel-item" href="#one!"><img src="assets/Macho-Man-1.jfif"></a>
+                        <a class="carousel-item" href="#two!"><img src="assets/Macho-Man-2.jfif"></a>
+                        <a class="carousel-item" href="#three!"><img src="assets/Macho-Man-3.jfif"></a>
+                        <a class="carousel-item" href="#four!"><img src="assets/Macho-Man-4.jfif"></a>
+                        <a class="carousel-item" href="#five!"><img src="assets/Macho-Man-5.jfif"></a>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
     </main>
     <footer></footer>
 </body>
+
 </html>

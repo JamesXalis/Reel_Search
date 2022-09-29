@@ -1,23 +1,7 @@
 let $main = document.querySelector("main");
+let $searchButton = document.querySelector("#searchMovieBTN");
+let $movieInput = document.querySelector("#password");
 let movieData = [];
-let title = '';
-let released = '';
-let genre = '';
-let actors = '';
-let awards = '';
-let plot = '';
-let poster = '';
-let rated = '';
-let $input = document.createElement("input");
-$input.setAttribute("type", "text");
-$input.setAttribute("placeholder", "Enter Movie Here");
-let $button = document.createElement("button")
-$button.textContent = "Search";
-let $uL = document.createElement("ul");
-// $main.append($input);
-// $main.append($button);
-// $main.append($uL);
-
 
 function getMovieData(movie) {
     let requestUrl = `http://www.omdbapi.com/?apikey=b4b72294&t=${movie}`;
@@ -27,31 +11,27 @@ function getMovieData(movie) {
             return response.json();
         })
         .then(function (data) {
-            title = data.Title;
-            released = data.Released;
-            genre = data.Genre;
-            actors = data.Actors;
-            awards = data.Awards;
-            plot = data.Plot;
-            poster = data.Poster;
-            rated = data.Rated;
-            movieData = [title, released, genre, actors, awards, plot, poster, rated]
-            document.createElement("lI");
-            for (i=0; i<movieData.length; i++) {
-                let $listItem = document.createElement("li");
-                $listItem.textContent = movieData[i]
-                $uL.append($listItem);
-                youTubeSearch(title);
-            }
+            console.log(data);
+            posterURL = data.Poster;
+            movieData = [data.Title, data.Released, data.Genre, data.Actors, data.Awards, data.Plot, data.Rated]
+            document.querySelector('iframe').style.display = `block`;
+            document.getElementById('movieInfo').style.display = `flex`;
+            document.getElementById('searchedPoster').setAttribute("src", posterURL);
+            document.getElementById('searchedTitle').textContent = `${movieData[0]}`;
+            document.getElementById('searchedRelease').textContent = `Release Date: ${movieData[1]}`;
+            document.getElementById('searchedActors').textContent = `Actors: ${movieData[3]}`;
+            document.getElementById('searchedGenre').textContent = `Genre: ${movieData[2]}`;
+            document.getElementById('searchedAwards').textContent = `Awards: ${movieData[4]}`;
+            document.getElementById('searchedPlot').textContent = `Plot: ${movieData[5]}`;
+            document.getElementById('searchedRated').textContent = `Rated: ${movieData[6]}`;
+            youTubeSearch(data.Title);
         });
 }
 
-
-
-$button.addEventListener("click", function() {
+$searchButton.addEventListener("click", function() {
     $uL.innerHTML = "";
-    getMovieData($input.value);
-    $input.value = '';
+    getMovieData($movieInput.value);
+    $movieInput.value = '';
 })
 
 function youTubeSearch(video){
@@ -73,15 +53,13 @@ function youTubeSearch(video){
 
 }
 
-
 //add type to make sure the video only shows video
 //channelId can be used to get most recent videos from youtube trailers
 //safe search modorate/strict
 //videoDuration set to short
 //videoEmbeddable set that to true
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
-  });
+});
