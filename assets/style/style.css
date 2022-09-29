@@ -1,11 +1,16 @@
 body{
-
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(
         to left,
         black 50%,
         red 50%
     );
 }
+
+ /* .carousel-container-1 {
+    display:flex;
+}  */
 
 #logo-container {
     display: flex;
@@ -15,6 +20,19 @@ body{
 
 #logo {
     max-height: 4rem;
+}
+
+.carousel {
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin:10px; 
+    max-width: auto;
+    min-width: auto;
+    background-color: black;
+    border-color: white;
+    border:5px white;
+    border-style:outset;
 }
 
 /* 
