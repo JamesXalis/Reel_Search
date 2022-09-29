@@ -9,10 +9,6 @@ body{
     background-color: #1f1d1d;
 }
 
-/* .carousel-container-1 {
-    display:flex;
-}  */
-
 #logo-container {
     display: flex;
     align-items: center;
@@ -37,8 +33,9 @@ p {
     font-size: 13.5pt;
 }
     /* background-color: #555555; */
-    
 
+}
+    
 iframe {
     background-color: #242322;
     display: none;
