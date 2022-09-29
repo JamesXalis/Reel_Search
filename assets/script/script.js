@@ -2,6 +2,10 @@ let $main = document.querySelector("main");
 let $searchButton = document.querySelector("#searchMovieBTN");
 let $movieInput = document.querySelector("#password");
 let movieData = [];
+let randomMovies = ["The Matrix”, “Spider-Man”, “The Amazing Spider-Man”, “Interstellar”, “The Martian”, “The Disaster Artist”, “Despicable Me”, “Casablanca”, “Argo”, “Crash”, “Capote”, “Mission Impossible: Rogue Nation”, “Mission Impossible 2”, “Sonic the Hedgehog”, “Kingsman: The Secret Service”, “Iron Man”, “The Avengers”, “Star Wars: Empire Strikes Back”, “Blade Runner”, “Dances With Wolves”, “A Clockwork Orange”, “Sharknado”, “The Birds”, “Silence of the Lambs”, “Misery”, “Psycho”, “The Shining”, “Lord of the Rings: Fellowship of the Ring”, “Transporter”, “Die Hard”, “Galaxy Quest”, “Toy Story”, “Oceans Eleven”, “Goldfinger”, “Get Smart”, “Casino Royale”, “Knives Out”, “Flubber”, “Hook”, “Jumanji”, “Mrs. Doubtfire”, “El Dorado”, “Shrek”, “Tarzan”, “The Mummy”, “Space Balls”, “Robin Hood: Men in Tights”, “The Evil Dead”, “Get Out”, “Nightmare on Elm Street”, “Halloween”, “Hocus Pocus”, “The Greatest Showman”, “High School Musical”, “Twilight”, “Harry Potter and the Sorcerers Stone”, “Harry Potter and the Goblet of Fire”, “The Hunger Games”, “Silver Linings Playbook”, “Full Metal Jacket”, “The Room”, “Mortal Kombat”, “Scary Movie”, “Speed”, “Point Break”, “Doctor Sleep”, “Batman Begins”, “The Dark Knight”, “Batman Returns”, “Shes All That”, “Not Another Teen Movie”, “Godzilla", "Rocky"
+];
+let inTheaters = ["Nope", "Bullet Train", "Pearl", "See How They Run", "The Invitation", "Selena"];
+let newReleases = ["Thor: Love and Thunder", "Black Phone", "Sound of Metal", "Bullet Proof", "Lost Illusions", "Wrong Place"];
 
 function getMovieData(movie) {
     let requestUrl = `http://www.omdbapi.com/?apikey=b4b72294&t=${movie}`;
