@@ -41,6 +41,18 @@ p {
     max-height: 4rem;
 }
 
+#c1-header {
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+}
+
+#c2-header {
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+}
+
 .carousel {
     align-items: center;
     justify-content: center;
