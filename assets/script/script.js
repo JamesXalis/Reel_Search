@@ -14,9 +14,9 @@ $input.setAttribute("placeholder", "Enter Movie Here");
 let $button = document.createElement("button")
 $button.textContent = "Search";
 let $uL = document.createElement("ul");
-// $main.append($input);
-// $main.append($button);
-// $main.append($uL);
+$main.append($input);
+$main.append($button);
+$main.append($uL);
 
 
 function getMovieData(movie) {
@@ -58,7 +58,7 @@ function youTubeSearch(video){
     //requestUrl currently is running a search under 'matrix' that needs to be refrenced to what the user searches for ${searchTerm()}
     console.log(video)
     let requestUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${video}_trailer&key=AIzaSyDZFKj9BobzhlYLwGozMZCE8qgQgrIcWc0`;
-    
+
     fetch(requestUrl)
         .then (function(response) {
             return response.json();
@@ -74,14 +74,10 @@ function youTubeSearch(video){
 }
 
 
-//add type to make sure the video only shows video
-//channelId can be used to get most recent videos from youtube trailers
-//safe search modorate/strict
-//videoDuration set to short
-//videoEmbeddable set that to true
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
-  });
+});
