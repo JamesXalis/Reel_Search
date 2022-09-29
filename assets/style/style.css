@@ -7,21 +7,17 @@ body{
         red 50%
     );
 }
-
  /* .carousel-container-1 {
     display:flex;
 }  */
-
 #logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 #logo {
     max-height: 4rem;
 }
-
 .carousel {
     align-items: center;
     justify-content: center;
@@ -34,7 +30,9 @@ body{
     border:5px white;
     border-style:outset;
 }
-
+#searchMovieBTN {
+    top: -9px;
+}
 /* 
 header nav { 
     padding-top: 15px;
