@@ -1,23 +1,90 @@
 body{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    background: linear-gradient(
+    /* background: linear-gradient(
         to left,
         black 50%,
-        red 50%
-    );
+        red 50% */
+    /* ); */
+    background-color: #1f1d1d;
 }
- /* .carousel-container-1 {
+
+/* .carousel-container-1 {
     display:flex;
 }  */
+
 #logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+.welcome {
+    background-color: red;
+    border: 3px white;
+    border-style: outset;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+#welcome-title {
+    text-align: center;
+}
+
+p {
+    margin:15px;
+    font-size: 13.5pt;
+}
+    /* background-color: #555555; */
+    
+
+iframe {
+    background-color: #242322;
+    display: none;
+}
+
+#searchMovieBTN {
+    top:-9px;
+}
+
+#movieInfo {
+    display: none;
+    margin-bottom: 30px;
+    background-color: rgba(54, 6, 8, .9);
+}
+
+#movieInfo img {
+    margin: 40px 20px 40px 40px;
+}
+
+#movieInfo section {
+    margin: 40px 20px;
+    width: 60%;
+    padding: 10px;
+    color:white;
+}
+
+#movieInfo section h2 {
+    margin: 0 0 1.42rem 0;
+}
+
 #logo {
     max-height: 4rem;
 }
+
+#c1-header {
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+}
+
+#c2-header {
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+}
+
 .carousel {
     align-items: center;
     justify-content: center;
@@ -29,6 +96,7 @@ body{
     border-color: white;
     border:5px white;
     border-style:outset;
+    border-radius: 12px;
 }
 #searchMovieBTN {
     top: -9px;
