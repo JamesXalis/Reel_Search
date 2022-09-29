@@ -32,11 +32,12 @@ body{
     text-align: center;
 }
 
-p {
+.welcome p {
     margin:15px;
     font-size: 13.5pt;
     /* background-color: #555555; */
     
+}
 
 iframe {
     background-color: #242322;
@@ -58,10 +59,10 @@ iframe {
 }
 
 #movieInfo section {
-    margin: 40px 20px;
     width: 60%;
     padding: 10px;
     color:white;
+    margin: 40px 20px;
 }
 
 #movieInfo section h2 {
