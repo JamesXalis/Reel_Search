@@ -7,11 +7,9 @@ body{
         red 50%
     );
 }
-
-#carousel-2 {
-    background-color: red;
-}  
-
+ /* .carousel-container-1 {
+    display:flex;
+}  */
 #logo-container {
     display: flex;
     align-items: center;
