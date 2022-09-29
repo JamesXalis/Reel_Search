@@ -29,7 +29,6 @@ function getMovieData(movie) {
 }
 
 $searchButton.addEventListener("click", function() {
-    $uL.innerHTML = "";
     getMovieData($movieInput.value);
     $movieInput.value = '';
 })
