@@ -14,9 +14,9 @@ $input.setAttribute("placeholder", "Enter Movie Here");
 let $button = document.createElement("button")
 $button.textContent = "Search";
 let $uL = document.createElement("ul");
-$main.append($input);
-$main.append($button);
-$main.append($uL);
+// $main.append($input);
+// $main.append($button);
+// $main.append($uL);
 carousel = [document.querySelector('#c1'),document.querySelector('#c2'),document.querySelector('#c3'),document.querySelector('#c4'),document.querySelector('#c5')];
 
 index=0;
@@ -49,7 +49,7 @@ function getMovieData(movie) {
             $main.append($poster);
             carousel[index].src = posterURL;
             index++;
-            youTubeSearch(data.Title);
+            // youTubeSearch(data.Title);
         });
 }
 
