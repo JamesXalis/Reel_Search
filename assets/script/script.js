@@ -29,7 +29,6 @@ function getMovieData(movie) {
 }
 
 $searchButton.addEventListener("click", function() {
-    $uL.innerHTML = "";
     getMovieData($movieInput.value);
     $movieInput.value = '';
 })
@@ -62,4 +61,5 @@ function youTubeSearch(video){
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
-});
+  });
+
