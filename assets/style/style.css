@@ -33,6 +33,22 @@ body{
 #searchMovieBTN {
     top: -9px;
 }
+
+#searchMovieBTN {
+    background-color: #555555;
+    border-radius: 12px;
+}
+ #logo-container{
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 2px 2px 5px white;
+    font-size: 45px;
+ }
+
+ nav {
+    margin: 20px;
+    padding: 0px;
+    background-color:rgba(54, 6, 8, .9);
+ }
 /* 
 header nav { 
     padding-top: 15px;
