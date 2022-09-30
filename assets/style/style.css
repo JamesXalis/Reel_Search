@@ -35,12 +35,7 @@ p {
     font-size: 13.5pt;
 }
     /* background-color: #555555; */
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 90867fbd20739071820cf0de3260acf5f06f32c5
-    
 iframe {
     background-color: #242322;
     display: none;
@@ -87,6 +82,17 @@ iframe {
     text-align: center;
 }
 
+#c3-header {
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+}
+
+.sandwich-meat {
+    align-content: space-between;
+    justify-content: space-between;
+}
+
 .carousel {
     align-items: center;
     justify-content: center;
@@ -98,7 +104,11 @@ iframe {
     border-color: white;
     border:5px white;
     border-style:outset;
-    border-radius: 12px;
+    border-radius: 12px; 
+}
+
+.carousel-item {
+    display: block;
 }
 
 #view-showtimes {
