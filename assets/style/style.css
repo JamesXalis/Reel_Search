@@ -9,6 +9,7 @@ body{
     background-color: #1f1d1d;
 }
 
+
 #logo-container {
     display: flex;
     align-items: center;
@@ -97,7 +98,7 @@ iframe {
     align-items: center;
     justify-content: center;
     display: block;
-    margin:10px; 
+    margin:10px 20px 10px 10px; 
     max-width: auto;
     min-width: auto;
     background-color: black;
@@ -105,6 +106,20 @@ iframe {
     border:5px white;
     border-style:outset;
     border-radius: 12px; 
+}
+
+#carousel-3 {
+    margin: 10px;
+    margin-right: 30px;
+}
+
+#carousel-4 {
+    margin: 10px;
+    margin-right: 30px;
+}
+
+#carousel-2 {
+    margin-right:20px;
 }
 
 .carousel-item {
@@ -153,8 +168,21 @@ button a {
 
  .nav-wrapper{
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+ }
+
+ /*This format is necessary. It will smooth out the header.*/
+ ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 10px;
+ }
+
+ li {
+    padding: 10px;
  }
 
  header {
