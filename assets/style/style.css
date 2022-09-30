@@ -133,11 +133,21 @@ button a {
     font-size: 45px;
 }
 
-nav {
-    /* margin: 20px; */
+ nav {
+    height: 100%;
     padding: 0px;
     background-color:rgba(54, 6, 8, .9);
-}
+ }
+
+ .nav-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ header {
+    height: 100px;
+ }
 /* 
 header nav { 
     padding-top: 15px;
