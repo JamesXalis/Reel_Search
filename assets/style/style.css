@@ -35,6 +35,11 @@ p {
     font-size: 13.5pt;
 }
     /* background-color: #555555; */
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 90867fbd20739071820cf0de3260acf5f06f32c5
     
 iframe {
     background-color: #242322;
@@ -131,9 +136,19 @@ button a {
  }
 
  nav {
-    margin: 20px;
+    height: 100%;
     padding: 0px;
     background-color:rgba(54, 6, 8, .9);
+ }
+
+ .nav-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ header {
+    height: 100px;
  }
 /* 
 header nav { 
