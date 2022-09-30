@@ -16,7 +16,6 @@ body{
     justify-content: center;
 }
 
-
 .welcome {
     /* background-color:rgba(54, 6, 8, .9); */
     background-color: black;
@@ -31,18 +30,17 @@ body{
     text-align: center;
 }
 
-p {
+.welcome p {
     margin:15px;
     font-size: 13.5pt;
 }
     /* background-color: #555555; */
-
 iframe {
     background-color: #242322;
     display: none;
 }
 
-#searchMovieBTN {
+#searchMovieBTN, #searchRandomBTN, #wishlistBTN {
     top:-9px;
 }
 
@@ -57,10 +55,14 @@ iframe {
 }
 
 #movieInfo section {
-    margin: 40px 20px;
     width: 60%;
     padding: 10px;
     color:white;
+    margin: 40px 20px;
+}
+
+#password {
+    color: white;
 }
 
 #movieInfo section h2 {
@@ -146,19 +148,20 @@ button a {
     
 }
 
-#searchMovieBTN {
+#searchMovieBTN, #searchRandomBTN {
     top: -9px;
 }
 
-#searchMovieBTN {
+#searchMovieBTN, #searchRandomBTN, #wishlistBTN {
     background-color: #555555;
     border-radius: 12px;
 }
- #logo-container{
+
+#logo-container{
     font-family: Copperplate, Papyrus, fantasy;
     text-shadow: 2px 2px 5px white;
     font-size: 45px;
- }
+}
 
  nav {
     height: 100%;
@@ -188,6 +191,10 @@ button a {
  header {
     height: 100px;
  }
+
+#currentWatchlist {
+    color: white;
+}
 /* 
 header nav { 
     padding-top: 15px;
