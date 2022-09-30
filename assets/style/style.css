@@ -34,7 +34,7 @@ p {
 }
     /* background-color: #555555; */
 
-}
+
     
 iframe {
     background-color: #242322;
@@ -110,9 +110,19 @@ iframe {
  }
 
  nav {
-    margin: 20px;
+    height: 100%;
     padding: 0px;
     background-color:rgba(54, 6, 8, .9);
+ }
+
+ .nav-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ header {
+    height: 100px;
  }
 /* 
 header nav { 
