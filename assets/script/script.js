@@ -1,9 +1,9 @@
 let $main = document.querySelector("main");
 let $searchButton = document.querySelector("#searchMovieBTN");
+let $randomButton = document.querySelector("#searchRandomBTN")
 let $movieInput = document.querySelector("#password");
 let movieData = [];
-let randomMovies = ["The Matrix”, “Spider-Man”, “The Amazing Spider-Man”, “Interstellar”, “The Martian”, “The Disaster Artist”, “Despicable Me”, “Casablanca”, “Argo”, “Crash”, “Capote”, “Mission Impossible: Rogue Nation”, “Mission Impossible 2”, “Sonic the Hedgehog”, “Kingsman: The Secret Service”, “Iron Man”, “The Avengers”, “Star Wars: Empire Strikes Back”, “Blade Runner”, “Dances With Wolves”, “A Clockwork Orange”, “Sharknado”, “The Birds”, “Silence of the Lambs”, “Misery”, “Psycho”, “The Shining”, “Lord of the Rings: Fellowship of the Ring”, “Transporter”, “Die Hard”, “Galaxy Quest”, “Toy Story”, “Oceans Eleven”, “Goldfinger”, “Get Smart”, “Casino Royale”, “Knives Out”, “Flubber”, “Hook”, “Jumanji”, “Mrs. Doubtfire”, “El Dorado”, “Shrek”, “Tarzan”, “The Mummy”, “Space Balls”, “Robin Hood: Men in Tights”, “The Evil Dead”, “Get Out”, “Nightmare on Elm Street”, “Halloween”, “Hocus Pocus”, “The Greatest Showman”, “High School Musical”, “Twilight”, “Harry Potter and the Sorcerers Stone”, “Harry Potter and the Goblet of Fire”, “The Hunger Games”, “Silver Linings Playbook”, “Full Metal Jacket”, “The Room”, “Mortal Kombat”, “Scary Movie”, “Speed”, “Point Break”, “Doctor Sleep”, “Batman Begins”, “The Dark Knight”, “Batman Returns”, “Shes All That”, “Not Another Teen Movie”, “Godzilla", "Rocky"
-];
+let randomMovies = ["The Matrix", "Spider-Man", "The Amazing Spider-Man", "Interstellar", "The Martian", "The Disaster Artist", "Despicable Me", "Casablanca", "Argo", "Crash", "Capote", "Mission: Impossible-Rogue Nation", "Mission: Impossible II", "Sonic the Hedgehog", "Kingsman: The Secret Service", "Iron Man", "The Avengers", "Star Wars: Episode V-The Empire Strikes Back", "Blade Runner", "Dances With Wolves", "A Clockwork Orange", "Sharknado", "The Birds", "The Silence of the Lambs", "Misery", "Psycho", "The Shining", "The Lord of the Rings: The Fellowship of the Ring", "The Transporter", "Die Hard", "Galaxy Quest", "Toy Story", "Ocean's Eleven", "Goldfinger", "Get Smart", "Casino Royale", "Knives Out", "Flubber", "Hook", "Jumanji", "Mrs. Doubtfire", "El Dorado", "Shrek", "Tarzan", "The Mummy", "Spaceballs", "Robin Hood: Men in Tights", "The Evil Dead", "Get Out", "Nightmare on Elm Street", "Halloween", "Hocus Pocus", "The Greatest Showman", "High School Musical", "Twilight", "Harry Potter and the Sorcerer's Stone", "Harry Potter and the Goblet of Fire", "The Hunger Games", "Silver Linings Playbook", "Full Metal Jacket", "The Room", "Mortal Kombat", "Scary Movie", "Speed", "Point Break", "Doctor Sleep", "Batman Begins", "The Dark Knight", "Batman Returns", "She's All That", "Not Another Teen Movie", "Godzilla", "Rocky"];
 let inTheaters = ["Nope", "Bullet Train", "Pearl", "See How They Run", "The Invitation", "Selena"];
 let newReleases = ["Thor: Love and Thunder", "Black Phone", "Sound of Metal", "Bullet Proof", "Lost Illusions", "Wrong Place"];
 
@@ -32,10 +32,6 @@ function getMovieData(movie) {
         });
 }
 
-$searchButton.addEventListener("click", function() {
-    getMovieData($movieInput.value);
-    $movieInput.value = '';
-})
 
 function youTubeSearch(video){
     //requestUrl currently is running a search under 'matrix' that needs to be refrenced to what the user searches for ${searchTerm()}
@@ -43,18 +39,18 @@ function youTubeSearch(video){
     let requestUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${video}_trailer&key=AIzaSyDZFKj9BobzhlYLwGozMZCE8qgQgrIcWc0`;
     
     fetch(requestUrl)
-        .then (function(response) {
-            return response.json();
-        })
-        .then (function(data) {
-            console.log(data)
-            console.log(`${data.items[0].id.videoId}`) //this is the video id for the given youtube video
-            document.querySelector(".youtubeVideo").src =`https://www.youtube.com/embed/${data.items[0].id.videoId}` 
-            //this grabs the youtubeVideo iFrame and links the 
-            //.src video into the html file.
-        })
-
-}
+    .then (function(response) {
+        return response.json();
+    })
+    .then (function(data) {
+        console.log(data)
+        console.log(`${data.items[0].id.videoId}`) //this is the video id for the given youtube video
+        document.querySelector(".youtubeVideo").src =`https://www.youtube.com/embed/${data.items[0].id.videoId}` 
+        //this grabs the youtubeVideo iFrame and links the 
+        //.src video into the html file.
+    })
+    
+};
 
 //add type to make sure the video only shows video
 //channelId can be used to get most recent videos from youtube trailers
@@ -65,5 +61,20 @@ function youTubeSearch(video){
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
-  });
+});
 
+
+$searchButton.addEventListener("click", function() {
+    if (!$movieInput.value.trim()) {
+        $movieInput.value = '';
+        return;
+    }
+    getMovieData($movieInput.value.trim());
+    $movieInput.value = '';
+});
+
+$randomButton.addEventListener('click', function(){
+    let randMOV = randomMovies[Math.floor(Math.random()*randomMovies.length)]
+    console.log(randMOV);
+    getMovieData(randMOV);
+});

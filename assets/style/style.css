@@ -40,7 +40,7 @@ iframe {
     display: none;
 }
 
-#searchMovieBTN {
+#searchMovieBTN, #searchRandomBTN, #wishlistBTN {
     top:-9px;
 }
 
@@ -119,14 +119,15 @@ button a {
     
 }
 
-#searchMovieBTN {
+#searchMovieBTN, #searchRandomBTN {
     top: -9px;
 }
 
-#searchMovieBTN {
+#searchMovieBTN, #searchRandomBTN, #wishlistBTN {
     background-color: #555555;
     border-radius: 12px;
 }
+
 #logo-container{
     font-family: Copperplate, Papyrus, fantasy;
     text-shadow: 2px 2px 5px white;
