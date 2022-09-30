@@ -16,8 +16,10 @@ body{
 }
 
 .welcome {
-    background-color: red;
+    /* background-color:rgba(54, 6, 8, .9); */
+    background-color: black;
     border: 3px white;
+    color:white;
     border-style: outset;
     border-radius: 12px;
     margin: 10px;
@@ -31,7 +33,7 @@ body{
     margin:15px;
     font-size: 13.5pt;
 }
-
+    /* background-color: #555555; */
     
 iframe {
     background-color: #242322;
@@ -96,6 +98,27 @@ iframe {
     border-style:outset;
     border-radius: 12px;
 }
+
+#view-showtimes {
+    display: none;
+   justify-content: space-between;
+   justify-items:end;
+   align-items: end;
+   align-content:space-between;
+   height: 40px;
+   width: auto;
+   position: absolute;
+
+}
+
+button a {
+    display: none;
+    color: black;
+    align-items: center;
+    border-radius: 12px;
+    
+}
+
 #searchMovieBTN {
     top: -9px;
 }
