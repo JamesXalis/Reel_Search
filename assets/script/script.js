@@ -1,11 +1,14 @@
 let $main = document.querySelector("main");
 let $searchButton = document.querySelector("#searchMovieBTN");
-let $randomButton = document.querySelector("#searchRandomBTN")
+let $randomButton = document.querySelector("#searchRandomBTN");
+let $wishlistButton = document.querySelector("#wishlistBTN");
 let $movieInput = document.querySelector("#password");
 let movieData = [];
 let randomMovies = ["The Matrix", "Spider-Man", "The Amazing Spider-Man", "Interstellar", "The Martian", "The Disaster Artist", "Despicable Me", "Casablanca", "Argo", "Crash", "Capote", "Mission: Impossible-Rogue Nation", "Mission: Impossible II", "Sonic the Hedgehog", "Kingsman: The Secret Service", "Iron Man", "The Avengers", "Star Wars: Episode V-The Empire Strikes Back", "Blade Runner", "Dances With Wolves", "A Clockwork Orange", "Sharknado", "The Birds", "The Silence of the Lambs", "Misery", "Psycho", "The Shining", "The Lord of the Rings: The Fellowship of the Ring", "The Transporter", "Die Hard", "Galaxy Quest", "Toy Story", "Ocean's Eleven", "Goldfinger", "Get Smart", "Casino Royale", "Knives Out", "Flubber", "Hook", "Jumanji", "Mrs. Doubtfire", "El Dorado", "Shrek", "Tarzan", "The Mummy", "Spaceballs", "Robin Hood: Men in Tights", "The Evil Dead", "Get Out", "Nightmare on Elm Street", "Halloween", "Hocus Pocus", "The Greatest Showman", "High School Musical", "Twilight", "Harry Potter and the Sorcerer's Stone", "Harry Potter and the Goblet of Fire", "The Hunger Games", "Silver Linings Playbook", "Full Metal Jacket", "The Room", "Mortal Kombat", "Scary Movie", "Speed", "Point Break", "Doctor Sleep", "Batman Begins", "The Dark Knight", "Batman Returns", "She's All That", "Not Another Teen Movie", "Godzilla", "Rocky"];
 let inTheaters = ["Nope", "Bullet Train", "Pearl", "See How They Run", "The Invitation", "Selena"];
 let newReleases = ["Thor: Love and Thunder", "Black Phone", "Sound of Metal", "Bullet Proof", "Lost Illusions", "Wrong Place"];
+let oscarWinners = ["CODA", "Nomadland", "Parasite", "Green Book", "The Shape of Water", "Moonlight", "Spotlight", "Birdman", "12 Years a Slave", "Argo", "The Artist", "The Kings Speech", "Slumdog Millionaire", "The Hurt Locker", "No Country for Old Men", "The Departed", "Million Dollar Baby", "Crash", "The Lord of the Rings: The Return of the King", "Chicago", "A Beautiful Mind", "Gladiator"
+];
 
 function getMovieData(movie) {
     let requestUrl = `http://www.omdbapi.com/?apikey=b4b72294&t=${movie}`;
@@ -63,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Carousel.init(elems);
 });
 
+index2init();
 
 $searchButton.addEventListener("click", function() {
     if (!$movieInput.value.trim()) {
@@ -78,3 +82,23 @@ $randomButton.addEventListener('click', function(){
     console.log(randMOV);
     getMovieData(randMOV);
 });
+
+$wishlistButton.addEventListener('click', function(){
+    let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
+    if (WatchList.includes(document.getElementById('searchedTitle').textContent)) {
+        console.log(WatchList);
+        return;
+    }
+    WatchList.push(document.getElementById('searchedTitle').textContent);
+    console.log(WatchList);
+    localStorage.setItem('localWatchList', JSON.stringify(WatchList));
+});
+
+function index2init() {
+    let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
+    for (i=0; i<WatchList.length; i++) {
+        let newMovie = document.createElement('li');
+        newMovie.textContent = WatchList[i];
+        document.getElementById('currentWatchlist').append(newMovie);
+    }
+};
