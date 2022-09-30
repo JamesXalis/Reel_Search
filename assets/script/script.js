@@ -28,7 +28,7 @@ function getMovieData(movie) {
             document.getElementById('searchedAwards').textContent = `Awards: ${movieData[4]}`;
             document.getElementById('searchedPlot').textContent = `Plot: ${movieData[5]}`;
             document.getElementById('searchedRated').textContent = `Rated: ${movieData[6]}`;
-            youTubeSearch(data.Title);
+            // youTubeSearch(data.Title);
         });
 }
 
@@ -66,4 +66,5 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
   });
+
 
