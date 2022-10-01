@@ -39,12 +39,9 @@ body{
     font-size: 13.5pt;
 }
     /* background-color: #555555; */
-<<<<<<< HEAD
 
 
     
-=======
->>>>>>> c65d218dc910d63e797ef0e900b51a729eab359f
 iframe {
     background-color: #242322;
     display: none;
@@ -221,7 +218,6 @@ button a {
     height: 100px;
  }
 
-<<<<<<< HEAD
  #index-2{
     background-color: #1f1d1d;
     background-image: url('https://www.plex.tv/wp-content/uploads/2021/04/plex-splash-screen-04-30-21-new-1440x810.png');
@@ -230,11 +226,6 @@ button a {
     background-size: 100% 100%;
  }
 
-=======
-#currentWatchlist {
-    color: white;
-}
->>>>>>> c65d218dc910d63e797ef0e900b51a729eab359f
 /* 
 header nav { 
     padding-top: 15px;
