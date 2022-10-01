@@ -88,10 +88,12 @@ $wishlistButton.addEventListener('click', function(){
         console.log(WatchList);
         return;
     }
-    if (W)
-    WatchList.push(document.getElementById('searchedTitle').textContent);
+    WatchList.unshift(document.getElementById('searchedTitle').textContent);
+    WatchListPosterURL.unshift(document.getElementById('searchedPoster').getAttribute('src'));
     console.log(WatchList);
+    console.log(WatchListPosterURL);
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
+    localStorage.setItem('localWatchListPosterURL', JSON.stringify(WatchListPosterURL));
 });
 
 // function index2init() {
