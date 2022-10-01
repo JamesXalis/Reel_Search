@@ -129,22 +129,41 @@ iframe {
 }
 
 #view-showtimes {
-    display: none;
+    display: flex;
    justify-content: space-between;
-   justify-items:end;
-   align-items: end;
+   align-items: center;
    align-content:space-between;
    height: 40px;
    width: auto;
-   position: absolute;
+   background-color:black;
+   border-color: white;
+   border-style: outset;
+   border-radius: 12px;
+   margin-left: 20px;
 
 }
 
+#new-release-list {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   align-content:space-between;
+   height: 40px;
+   width: auto;
+   background-color:black;
+   border-color: white;
+   border-style: outset;
+   border-radius: 12px;
+   margin-left: 20px;
+}
+
 button a {
-    display: none;
-    color: black;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
     align-items: center;
-    border-radius: 12px;
+    
     
 }
 
@@ -198,6 +217,15 @@ button a {
 
 #watchListHeader {
     text-align: center;
+    color:white;
+    background-color: rgba(54, 6, 8, .9);
+    margin: 0;
+    padding: 1.52rem 0 0.912rem 0;
+}
+
+#currentWatchlist a {
+    font-size: 1.3em;
+    /* background-color: rgba(54, 6, 8, .1); */
 }
 
 

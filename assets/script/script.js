@@ -83,10 +83,12 @@ $randomButton.addEventListener('click', function(){
 
 $wishlistButton.addEventListener('click', function(){
     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
+    let WatchListPosterURL = JSON.parse(localStorage.getItem('localWatchListPosterURL')) || [];
     if (WatchList.includes(document.getElementById('searchedTitle').textContent)) {
         console.log(WatchList);
         return;
     }
+    if (W)
     WatchList.push(document.getElementById('searchedTitle').textContent);
     console.log(WatchList);
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
