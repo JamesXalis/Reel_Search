@@ -8,33 +8,29 @@
     <title>Reel Search</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="./assets/script/script.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>\
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="#" id="logo-container" class="brand-logo"><img id="logo" src="./assets/Reel_Movie-removebg-preview.png">REEL search</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <a href="#" id="logo-container" class=""><img id="logo"
+                        src="./assets/Reel_Movie-removebg-preview.png">REEL search</a>
+                <ul id="nav-mobile" class="hide-on-med-and-down">
                     <!-- <li><a href="sass.html">Search</a></li> -->
-                    <li><a href="index-2.html">My Watchlist</a></li>
+                    <li><a href="index-2.html">Watchlist </a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <iframe width="100%" height="600px" class="youtubeVideo"></iframe>
-        <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=movietrailers" height="300px" width="100%"></iframe>
         <div class="row valign-wrapper">
-            <button class="btn waves-effect waves-light col s1" id="searchMovieBTN" type="submit" name="action">Search</button>
-            <form class="col s11">
+            <button class="btn waves-effect waves-light col s1" id="searchMovieBTN" type="submit"
+                name="action">Search</button>
+            <form class="col s10">
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="password" type="text" class="validate">
@@ -42,64 +38,73 @@
                     </div>
                 </div>
             </form>
+            <button class="btn waves-effect waves-light col s1" id="searchRandomBTN" type="submit"
+                name="action">Random</button>
         </div>
         <div class="row">
             <iframe width="100%" height="600px" class="youtubeVideo"></iframe>
         </div>
         <div id="movieInfo">
-            <img id="searchedPoster" src="https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg">
-            <section>
+            <img id="searchedPoster"
+                src="https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg">
+            <section id="movieInfoText">
                 <h2 id="searchedTitle">Spider-Man</h2>
                 <h4 id="searchedRelease">Release Date: xx.xx.xx</h4>
                 <p id="searchedActors">Actors: Lebron James, Lebron James, Lebron James</p>
                 <p id="searchedGenre">Genre: Action</p>
                 <p id="searchedAwards">Awards: Dundee for Best Movie</p>
                 <p id="searchedPlot">Plot: Nerd becomes cool</p>
-                <p id="searchedRated">Rated: R</p>
+                <p id="searchedRated">Rated: R</p><br><br><br><br>
+                <button class="btn waves-effect waves-light col s1" id="wishlistBTN" type="submit" name="action">Add to
+                    Watchlist</button>
             </section>
         </div>
-       <section class="welcome">
-          <h1 id="welcome-title">
-            Welcome to Reel Search
-          </h1>
+        <section class="welcome">
+            <h1 id="welcome-title">Welcome to Reel Search</h1>
             <p id="welcome-paragragh">
-              Your one-stop movie database. No need to waste your time to find out if a movie is worth watching. 
-              Search a title. Get all the info you need. Need ideas? View Oscar winners, movies in theaters, new
-              releases, or just find a random movie if you're feeling adventurous. Create a watchlist to plan
-              out your weekend. The world of cinema is now yours to command!
+                Your one-stop movie database. No need to waste your time to find out if a movie is worth watching.
+                Search a title. Get all the info you need. Need ideas? View Oscar winners, movies in theaters, new
+                releases, or just find a random movie if you're feeling adventurous. Create a watchlist to plan
+                out your weekend. The world of cinema is now yours to command!
             </p>
         </section>
-        <section id="carousel-1"> 
-        <div class="row">
-          <div class="col m6 offset-s0">
-                <div class="carousel">
-                  <h2 id="c1-header">In Theaters Now</h2>
-                    <a class="carousel-item" href="#one!"><img src="assets/Macho-Man-1.jfif"></a>
-                    <a class="carousel-item" href="#two!"><img src="assets/Macho-Man-2.jfif"></a>
-                    <a class="carousel-item" href="#three!"><img src="assets/Macho-Man-3.jfif"></a>
-                    <a class="carousel-item" href="#four!"><img src="assets/Macho-Man-4.jfif"></a>
-                    <a class="carousel-item" href="#five!"><img src="assets/Macho-Man-5.jfif"></a>
-                    <div class="col m6 push-m4">
-                        <button id="view-showtimes">
-                          <a href="https://www.imdb.com/showtimes/?ref_=nv_mv_sh" target="_blank"> View Showtimes</a>
-                        </button>
-                          </div>
-                </div>
-             
-        </div>
-        </div>
-        <iframe src="https://www.youtube.com/watch?v=JpxsRwnRwCQ" height="100px" width="100%"></iframe>
-        </section>
-        <section id="carousel-2">
-        <div class="row">
-            <div class="col s6 offset-s6">
-                <div class="carousel">
-                  <h2 id="c2-header">New Releases</h2>
+        <section id="carousel-1">
+            <div class="row">
+                <div class="col m6 offset-s0">
+                    <div class="carousel">
+                        <h2 id="c1-header">In Theaters Now</h2>
+                        <a class="carousel-item" href="#one!"><img src="assets/Macho-Man-1.jfif"></a>
+                        <a class="carousel-item" href="#two!"><img src="assets/Macho-Man-2.jfif"></a>
+                        <a class="carousel-item" href="#three!"><img src="assets/Macho-Man-3.jfif"></a>
+                        <a class="carousel-item" href="#four!"><img src="assets/Macho-Man-4.jfif"></a>
+                        <a class="carousel-item" href="#five!"><img src="assets/Macho-Man-5.jfif"></a>
+                        <div class="col m6 push-m4">
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section id="carousel-2">
+            <div class="row">
+                <div class="col s6 offset-s6">
+                    <div class="carousel">
+                        <h2 id="c2-header">New Releases</h2>
+                        <a class="carousel-item" href="#one!"><img src="assets/Macho-Man-1.jfif"></a>
+                        <a class="carousel-item" href="#two!"><img src="assets/Macho-Man-2.jfif"></a>
+                        <a class="carousel-item" href="#three!"><img src="assets/Macho-Man-3.jfif"></a>
+                        <a class="carousel-item" href="#four!"><img src="assets/Macho-Man-4.jfif"></a>
+                        <a class="carousel-item" href="#five!"><img src="assets/Macho-Man-5.jfif"></a>
+                    </div>
+                </div>
+<<<<<<< HEAD
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+    
+    </html>
+=======
         </section>
     </main>
     <footer></footer>
 </body>
-
-</html>
