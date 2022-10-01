@@ -231,9 +231,14 @@ button a {
     height: 100px;
  }
 
-#currentWatchlist {
-    color: white;
-}
+ #index-2{
+    background-color: #1f1d1d;
+    background-image: url('https://www.plex.tv/wp-content/uploads/2021/04/plex-splash-screen-04-30-21-new-1440x810.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+ }
+
 /* 
 header nav { 
     padding-top: 15px;

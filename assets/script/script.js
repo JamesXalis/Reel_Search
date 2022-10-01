@@ -94,6 +94,12 @@ $wishlistButton.addEventListener('click', function(){
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
 });
 
+// THIS IS FOR THE MODAL
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.modal');
+//     var instances = M.Modal.init(elems, options);
+//   });
+
 // function index2init() {
 //     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
 //     for (i=0; i<WatchList.length; i++) {
