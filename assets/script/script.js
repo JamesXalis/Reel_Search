@@ -55,7 +55,12 @@ function youTubeSearch(video){
     
 };
 
-
+function change (){
+    if (document.getElementById("ytplayer")=="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers")
+        document.getElementById("ytplayer").src ="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers&index=3"
+    else
+        document.getElementById("ytplayer").src= "https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers"
+}
 
 
 document.addEventListener('DOMContentLoaded', function() {
