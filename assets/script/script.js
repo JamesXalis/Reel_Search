@@ -67,8 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
 });
-<<<<<<< HEAD
-=======
+
 
 // index2init();
 
@@ -112,8 +111,4 @@ $wishlistButton.addEventListener('click', function(){
 //         document.getElementById('currentWatchlist').append(newMovie);
 //     }
 // };
-<<<<<<< HEAD
->>>>>>> c65d218dc910d63e797ef0e900b51a729eab359f
->>>>>>> ba814ea733ffd8717ee987f94b1a0ed4a4ff674e
-=======
->>>>>>> f7868a78f0b82c9c76ea6aefdcf6b55cb70d4fd5
+
