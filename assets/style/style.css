@@ -195,6 +195,7 @@ button a {
     background-color:rgba(54, 6, 8, .9);
  }
 
+
  .nav-wrapper{
     display:flex;
     flex-direction: row;
@@ -225,6 +226,11 @@ button a {
     background-attachment: fixed;
     background-size: 100% 100%;
  }
+
+
+#currentWatchlist {
+    color: white;
+}
 
 /* 
 header nav { 

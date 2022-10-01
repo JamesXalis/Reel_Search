@@ -40,7 +40,7 @@ function youTubeSearch(video){
     //requestUrl currently is running a search under 'matrix' that needs to be refrenced to what the user searches for ${searchTerm()}
     console.log(video)
     let requestUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${video}_trailer&key=AIzaSyDZFKj9BobzhlYLwGozMZCE8qgQgrIcWc0`;
-    
+
     fetch(requestUrl)
     .then (function(response) {
         return response.json();
@@ -55,16 +55,19 @@ function youTubeSearch(video){
     
 };
 
-//add type to make sure the video only shows video
-//channelId can be used to get most recent videos from youtube trailers
-//safe search modorate/strict
-//videoDuration set to short
-//videoEmbeddable set that to true
+function change (){
+    if (document.getElementById("ytplayer")=="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers")
+        document.getElementById("ytplayer").src ="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers&index=3"
+    else
+        document.getElementById("ytplayer").src= "https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers"
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
 });
+
 
 // index2init();
 
@@ -108,3 +111,4 @@ $wishlistButton.addEventListener('click', function(){
 //         document.getElementById('currentWatchlist').append(newMovie);
 //     }
 // };
+
