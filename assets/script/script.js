@@ -18,7 +18,6 @@ function getMovieData(movie) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
             posterURL = data.Poster;
             movieData = [data.Title, data.Released, data.Genre, data.Actors, data.Awards, data.Plot, data.Rated]
             document.querySelector('iframe').style.display = `block`;
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Carousel.init(elems);
 });
 
-index2init();
+// index2init();
 
 $searchButton.addEventListener("click", function() {
     if (!$movieInput.value.trim()) {
@@ -79,7 +78,6 @@ $searchButton.addEventListener("click", function() {
 
 $randomButton.addEventListener('click', function(){
     let randMOV = randomMovies[Math.floor(Math.random()*randomMovies.length)]
-    console.log(randMOV);
     getMovieData(randMOV);
 });
 
@@ -94,11 +92,11 @@ $wishlistButton.addEventListener('click', function(){
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
 });
 
-function index2init() {
-    let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
-    for (i=0; i<WatchList.length; i++) {
-        let newMovie = document.createElement('li');
-        newMovie.textContent = WatchList[i];
-        document.getElementById('currentWatchlist').append(newMovie);
-    }
-};
+// function index2init() {
+//     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
+//     for (i=0; i<WatchList.length; i++) {
+//         let newMovie = document.createElement('li');
+//         newMovie.textContent = WatchList[i];
+//         document.getElementById('currentWatchlist').append(newMovie);
+//     }
+// };

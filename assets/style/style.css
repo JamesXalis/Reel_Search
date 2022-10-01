@@ -195,6 +195,12 @@ button a {
 #currentWatchlist {
     color: white;
 }
+
+#watchListHeader {
+    text-align: center;
+}
+
+
 /* 
 header nav { 
     padding-top: 15px;
