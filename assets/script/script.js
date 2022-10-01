@@ -94,9 +94,6 @@ $wishlistButton.addEventListener('click', function(){
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
 });
 
-<<<<<<< HEAD
-
-=======
 // function index2init() {
 //     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
 //     for (i=0; i<WatchList.length; i++) {
@@ -105,4 +102,3 @@ $wishlistButton.addEventListener('click', function(){
 //         document.getElementById('currentWatchlist').append(newMovie);
 //     }
 // };
->>>>>>> c65d218dc910d63e797ef0e900b51a729eab359f
