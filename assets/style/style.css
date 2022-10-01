@@ -7,6 +7,7 @@ body{
         red 50% */
     /* ); */
     background-color: #1f1d1d;
+    background-image: url();
 }
 
 #logo-container {
@@ -84,6 +85,17 @@ iframe {
     text-align: center;
 }
 
+#c3-header {
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+}
+
+.sandwich-meat {
+    align-content: space-between;
+    justify-content: space-between;
+}
+
 .carousel {
     align-items: center;
     justify-content: center;
@@ -95,7 +107,11 @@ iframe {
     border-color: white;
     border:5px white;
     border-style:outset;
-    border-radius: 12px;
+    border-radius: 12px; 
+}
+
+.carousel-item {
+    display: block;
 }
 
 #view-showtimes {
@@ -147,6 +163,8 @@ button a {
  header {
     height: 100px;
  }
+
+
 /* 
 header nav { 
     padding-top: 15px;
