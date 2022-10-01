@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Carousel.init(elems);
 });
 
-index2init();
+// index2init();
 
 $searchButton.addEventListener("click", function() {
     if (!$movieInput.value.trim()) {
@@ -94,11 +94,11 @@ $wishlistButton.addEventListener('click', function(){
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
 });
 
-function index2init() {
-    let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
-    for (i=0; i<WatchList.length; i++) {
-        let newMovie = document.createElement('li');
-        newMovie.textContent = WatchList[i];
-        document.getElementById('currentWatchlist').append(newMovie);
-    }
-};
+// function index2init() {
+//     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
+//     for (i=0; i<WatchList.length; i++) {
+//         let newMovie = document.createElement('li');
+//         newMovie.textContent = WatchList[i];
+//         document.getElementById('currentWatchlist').append(newMovie);
+//     }
+// };
