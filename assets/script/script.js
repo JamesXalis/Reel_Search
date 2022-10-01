@@ -18,6 +18,10 @@ function getMovieData(movie) {
             return response.json();
         })
         .then(function (data) {
+            if (data.Error) {
+                document.getElementById("modalTriggerButton").click();
+                return;
+            }
             posterURL = data.Poster;
             movieData = [data.Title, data.Released, data.Genre, data.Actors, data.Awards, data.Plot, data.Rated]
             document.querySelector('iframe').style.display = `block`;
@@ -94,6 +98,11 @@ $wishlistButton.addEventListener('click', function(){
     console.log(WatchListPosterURL);
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
     localStorage.setItem('localWatchListPosterURL', JSON.stringify(WatchListPosterURL));
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
 });
 
 // function index2init() {
