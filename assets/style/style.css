@@ -40,7 +40,7 @@ body {
 }
 
 /* background-color: #555555; */
-iframe {
+#mainEmbed {
     background-color: #242322;
     display: none;
 }
@@ -115,6 +115,10 @@ iframe {
     border: 5px white;
     border-style: outset;
     border-radius: 12px;
+}
+
+#mainPageCarousel {
+    height: auto;
 }
 
 #carousel-3 {
@@ -198,8 +202,9 @@ nav {
     background-color: rgba(54, 6, 8, .9);
 }
 
-.nav-wrapper {
-    display: flex;
+
+ .nav-wrapper{
+    display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -250,6 +255,11 @@ header {
 
 #modalTriggerButton {
     display: none;
+}
+
+
+#currentWatchlist {
+    color: white;
 }
 
 /* 
