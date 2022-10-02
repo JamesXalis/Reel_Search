@@ -26,6 +26,8 @@ Assets:
 -youtube API
 -oMDB API
 -Materialize CDN
+-Background image url :https://www.plex.tv/wp-content/uploads/2021/04/plex-splash-screen-04-30-21-new-1440x810.png
+-Logo: url: https://www.kindpng.com/free/movie-reel/
 
 ## License
 
