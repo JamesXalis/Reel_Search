@@ -11,7 +11,7 @@ let oscarWinners = ["CODA", "Nomadland", "Parasite", "Green Book", "The Shape of
 ];
 
 function getMovieData(movie) {
-    let requestUrl = `http://www.omdbapi.com/?apikey=b4b72294&t=${movie}`;
+    let requestUrl = `https://www.omdbapi.com/?apikey=b4b72294&t=${movie}`;
 
     fetch(requestUrl)
         .then(function (response) {
