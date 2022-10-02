@@ -1,5 +1,3 @@
-
-```md
 # Reel Search
 
 ## Description
@@ -14,6 +12,10 @@ N/A
 
 The user can use the link at the top right to switch to the watchlist page. A bit further down, the user can search a movie title to retrieve its trailer and movie information. A "Random" button will procuce a random movie trailer and its affiliated information. Once any movie trailer and information section is loaded, the user can click an "add to watchlist" button, and the movie title will then appear on the watchlist page. If the user enters an invalid title, a custom modal will pop up informing the user that the movie was not found and ask them to try again. Further down, the user can view trailers of upcoming movie releases. On the watchlist page, the user can navigate to different sections of the page via the links at the top right. The watchlist appears first with its posters in a carousel and a list of titles below. Further down is a carousel of movies currently in theaters with a link to view showtimes of movies in theaters. Below that is a carousel of movies recently released on dvd and streaming with a link to a full list of titles. Below that is a carousel for Oscar winning movies with a link to view a full list of titles. The user can easily navigate these pages without error.
 
+## Deployed Page Link
+
+https://jamesxalis.github.io/Reel_Search/index.html
+
 ## Credits
 
 This was a team effort. The collaboraters were:
@@ -27,6 +29,13 @@ Assets:
 -oMDB API
 -Materialize CDN
 
+## Screenshots
+
+![Home Screen](/assets/imgs/HomeScreen.JPG "Home Screen")
+![Searched Movie Screen](/assets/imgs/SearchedMovie.JPG "Searched Movie Screen")
+![Watchlist Screen](/assets/imgs/Watchlist.JPG "Watchlist Screen")
+![More lists Screen](/assets/imgs/MoreLists..JPG "More Lists Screen")
+
 ## License
 
 Refer to license in repository.
@@ -38,5 +47,3 @@ N/A
 ## Features
 
 Search bar, embedded video, randomizer button, carousels, nav to second page, in-page nav on watchlist page, add to watchlist button.
-
-```

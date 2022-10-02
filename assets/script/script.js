@@ -35,7 +35,7 @@ function getMovieData(movie) {
             document.getElementById('searchedAwards').textContent = `Awards: ${movieData[4]}`;
             document.getElementById('searchedPlot').textContent = `Plot: ${movieData[5]}`;
             document.getElementById('searchedRated').textContent = `Rated: ${movieData[6]}`;
-            // youTubeSearch(data.Title, data.Released);
+            youTubeSearch(data.Title, data.Released);
         });
 }
 
