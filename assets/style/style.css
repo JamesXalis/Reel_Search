@@ -1,4 +1,4 @@
-body{
+body {
     /* display: flex; */
     flex-direction: column;
     /* background: linear-gradient(
@@ -24,7 +24,7 @@ body{
     /* background-color:rgba(54, 6, 8, .9); */
     background-color: black;
     border: 3px white;
-    color:white;
+    color: white;
     border-style: outset;
     border-radius: 12px;
     margin: 10px;
@@ -35,17 +35,20 @@ body{
 }
 
 .welcome p {
-    margin:15px;
+    margin: 15px;
     font-size: 13.5pt;
 }
-    /* background-color: #555555; */
-iframe {
+
+/* background-color: #555555; */
+#mainEmbed {
     background-color: #242322;
     display: none;
 }
 
-#searchMovieBTN, #searchRandomBTN, #wishlistBTN {
-    top:-9px;
+#searchMovieBTN,
+#searchRandomBTN,
+#wishlistBTN {
+    top: -9px;
 }
 
 #movieInfo {
@@ -61,7 +64,7 @@ iframe {
 #movieInfo section {
     width: 60%;
     padding: 10px;
-    color:white;
+    color: white;
     margin: 40px 20px;
 }
 
@@ -104,14 +107,18 @@ iframe {
     align-items: center;
     justify-content: center;
     display: block;
-    margin:10px 20px 10px 10px; 
+    margin: 10px 20px 10px 10px;
     max-width: auto;
     min-width: auto;
     background-color: black;
     border-color: white;
-    border:5px white;
-    border-style:outset;
-    border-radius: 12px; 
+    border: 5px white;
+    border-style: outset;
+    border-radius: 12px;
+}
+
+#mainPageCarousel {
+    height: auto;
 }
 
 #carousel-3 {
@@ -126,7 +133,7 @@ iframe {
 }
 
 #carousel-2 {
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 .carousel-item {
@@ -135,16 +142,16 @@ iframe {
 
 #view-showtimes {
     display: flex;
-   justify-content: space-between;
-   align-items: center;
-   align-content:space-between;
-   height: 40px;
-   width: auto;
-   background-color:black;
-   border-color: white;
-   border-style: outset;
-   border-radius: 12px;
-   margin-left: 20px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    height: 40px;
+    width: auto;
+    background-color: black;
+    border-color: white;
+    border-style: outset;
+    border-radius: 12px;
+    margin-left: 20px;
 
 }
 
@@ -187,26 +194,29 @@ button a {
     align-items: center;
 }
 
-#searchMovieBTN, #searchRandomBTN {
+#searchMovieBTN,
+#searchRandomBTN {
     top: -9px;
 }
 
-#searchMovieBTN, #searchRandomBTN, #wishlistBTN {
+#searchMovieBTN,
+#searchRandomBTN,
+#wishlistBTN {
     background-color: #555555;
     border-radius: 12px;
 }
 
-#logo-container{
+#logo-container {
     font-family: Copperplate, Papyrus, fantasy;
     text-shadow: 2px 2px 5px white;
     font-size: 45px;
 }
 
- nav {
+nav {
     height: 100%;
     padding: 0px;
-    background-color:rgba(54, 6, 8, .9);
- }
+    background-color: rgba(54, 6, 8, .9);
+}
 
 
  .nav-wrapper{
@@ -214,23 +224,23 @@ button a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
- }
+}
 
- /*This format is necessary. It will smooth out the header.*/
- ul {
+/*This format is necessary. It will smooth out the header.*/
+ul {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     padding: 10px;
- }
+}
 
- li {
+li {
     padding: 10px;
- }
+}
 
- header {
+header {
     height: 100px;
- }
+}
 
  #index-2{
     background-color: #1f1d1d;
@@ -238,7 +248,30 @@ button a {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
- }
+}
+
+
+#currentWatchlist {
+    color: white;
+}
+
+
+#watchListHeader {
+    text-align: center;
+    color: white;
+    background-color: rgba(54, 6, 8, 1);
+    margin: 0;
+    padding: 1.52rem 0 0.912rem 0;
+}
+
+#currentWatchlist a {
+    font-size: 1.3em;
+    /* background-color: rgba(54, 6, 8, .75); */
+}
+
+#modalTriggerButton {
+    display: none;
+}
 
 
 #currentWatchlist {

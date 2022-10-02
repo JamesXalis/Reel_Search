@@ -18,10 +18,13 @@ function getMovieData(movie) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+            if (data.Error) {
+                document.getElementById("modalTriggerButton").click();
+                return;
+            }
             posterURL = data.Poster;
             movieData = [data.Title, data.Released, data.Genre, data.Actors, data.Awards, data.Plot, data.Rated]
-            document.querySelector('iframe').style.display = `block`;
+            document.querySelector('mainEmbed').style.display = `block`;
             document.getElementById('movieInfo').style.display = `flex`;
             document.getElementById('searchedPoster').setAttribute("src", posterURL);
             document.getElementById('searchedTitle').textContent = `${movieData[0]}`;
@@ -56,10 +59,12 @@ function youTubeSearch(video){
 };
 
 function change (){
-    if (document.getElementById("ytplayer")=="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers")
+    if (document.getElementById("ytplayer").src=="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers") {
         document.getElementById("ytplayer").src ="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers&index=3"
-    else
+    }
+    else {
         document.getElementById("ytplayer").src= "https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers"
+    }
 }
 
 
@@ -82,26 +87,30 @@ $searchButton.addEventListener("click", function() {
 
 $randomButton.addEventListener('click', function(){
     let randMOV = randomMovies[Math.floor(Math.random()*randomMovies.length)]
-    console.log(randMOV);
     getMovieData(randMOV);
 });
 
 $wishlistButton.addEventListener('click', function(){
     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
+    let WatchListPosterURL = JSON.parse(localStorage.getItem('localWatchListPosterURL')) || [];
     if (WatchList.includes(document.getElementById('searchedTitle').textContent)) {
         console.log(WatchList);
         return;
     }
-    WatchList.push(document.getElementById('searchedTitle').textContent);
+    WatchList.unshift(document.getElementById('searchedTitle').textContent);
+    WatchListPosterURL.unshift(document.getElementById('searchedPoster').getAttribute('src'));
     console.log(WatchList);
+    console.log(WatchListPosterURL);
     localStorage.setItem('localWatchList', JSON.stringify(WatchList));
+    localStorage.setItem('localWatchListPosterURL', JSON.stringify(WatchListPosterURL));
 });
 
-// THIS IS FOR THE MODAL
-// document.addEventListener('DOMContentLoaded', function() {
-//     var elems = document.querySelectorAll('.modal');
-//     var instances = M.Modal.init(elems, options);
-//   });
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+});
+
+document.getElementById("ytplayer").setAttribute("src", "https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers")
 
 // function index2init() {
 //     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
