@@ -55,6 +55,7 @@ body {
     display: none;
     margin-bottom: 30px;
     background-color: rgba(54, 6, 8, .9);
+    align-items: flex-start;
 }
 
 #movieInfo img {
@@ -66,6 +67,13 @@ body {
     padding: 10px;
     color: white;
     margin: 40px 20px;
+}
+
+#AddedMSG {
+    color:green;
+    display:none;
+    font-size:1.3em;
+    margin:5px 0px 0px 0px;
 }
 
 #password {
@@ -111,6 +119,7 @@ body {
     max-width: auto;
     min-width: auto;
     background-color: black;
+    background-color: rgba(0, 0, 0, .8);
     border-color: white;
     border: 5px white;
     border-style: outset;
@@ -199,9 +208,15 @@ button a {
     top: -9px;
 }
 
+#clearSearchBTN {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
 #searchMovieBTN,
 #searchRandomBTN,
-#wishlistBTN {
+#wishlistBTN,
+#clearSearchBTN {
     background-color: #555555;
     border-radius: 12px;
 }
@@ -219,7 +234,7 @@ nav {
 }
 
 
- .nav-wrapper{
+.nav-wrapper{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -259,7 +274,7 @@ header {
 #watchListHeader {
     text-align: center;
     color: white;
-    background-color: rgba(54, 6, 8, 1);
+    background-color: rgba(0, 0, 0, .65);
     margin: 0;
     padding: 1.52rem 0 0.912rem 0;
 }

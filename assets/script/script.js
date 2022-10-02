@@ -23,8 +23,9 @@ function getMovieData(movie) {
                 return;
             }
             posterURL = data.Poster;
+            console.log(posterURL);
             movieData = [data.Title, data.Released, data.Genre, data.Actors, data.Awards, data.Plot, data.Rated]
-            document.querySelector('mainEmbed').style.display = `block`;
+            document.querySelector('#mainEmbed').style.display = `block`;
             document.getElementById('movieInfo').style.display = `flex`;
             document.getElementById('searchedPoster').setAttribute("src", posterURL);
             document.getElementById('searchedTitle').textContent = `${movieData[0]}`;
@@ -34,15 +35,14 @@ function getMovieData(movie) {
             document.getElementById('searchedAwards').textContent = `Awards: ${movieData[4]}`;
             document.getElementById('searchedPlot').textContent = `Plot: ${movieData[5]}`;
             document.getElementById('searchedRated').textContent = `Rated: ${movieData[6]}`;
-            // youTubeSearch(data.Title);
+            // youTubeSearch(data.Title, data.Released);
         });
 }
 
-
-function youTubeSearch(video){
+function youTubeSearch(video, date){
     //requestUrl currently is running a search under 'matrix' that needs to be refrenced to what the user searches for ${searchTerm()}
     console.log(video)
-    let requestUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${video}_trailer&key=AIzaSyDZFKj9BobzhlYLwGozMZCE8qgQgrIcWc0`;
+    let requestUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${video}_${date}_trailer&key=AIzaSyDZFKj9BobzhlYLwGozMZCE8qgQgrIcWc0`;
 
     fetch(requestUrl)
     .then (function(response) {
@@ -67,14 +67,10 @@ function change (){
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems);
 });
-
-
-// index2init();
 
 $searchButton.addEventListener("click", function() {
     if (!$movieInput.value.trim()) {
@@ -83,16 +79,26 @@ $searchButton.addEventListener("click", function() {
     }
     getMovieData($movieInput.value.trim());
     $movieInput.value = '';
+    document.getElementById('AddedMSG').setAttribute("style", "display:none");
+});
+
+document.getElementById("password").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        $searchButton.click();
+    }
 });
 
 $randomButton.addEventListener('click', function(){
     let randMOV = randomMovies[Math.floor(Math.random()*randomMovies.length)]
+    document.getElementById('AddedMSG').setAttribute("style", "display:none");
     getMovieData(randMOV);
 });
 
 $wishlistButton.addEventListener('click', function(){
     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
     let WatchListPosterURL = JSON.parse(localStorage.getItem('localWatchListPosterURL')) || [];
+    document.getElementById('AddedMSG').setAttribute("style", "display:block");
     if (WatchList.includes(document.getElementById('searchedTitle').textContent)) {
         console.log(WatchList);
         return;
@@ -110,14 +116,4 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Modal.init(elems);
 });
 
-document.getElementById("ytplayer").setAttribute("src", "https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers")
-
-// function index2init() {
-//     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
-//     for (i=0; i<WatchList.length; i++) {
-//         let newMovie = document.createElement('li');
-//         newMovie.textContent = WatchList[i];
-//         document.getElementById('currentWatchlist').append(newMovie);
-//     }
-// };
-
+document.getElementById("ytplayer").setAttribute("src", "https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers");
