@@ -19,3 +19,9 @@ function index2init() {
     }
 };
 index2init();
+
+
+// document.getElementById('clearSearchBTN').addEventListener("click", function() {
+//     document.getElementById('currentWatchlist').empty();
+//     localStorage.removeItem("localWatchList");
+// });
