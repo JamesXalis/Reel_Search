@@ -1,11 +1,5 @@
 body {
-    /* display: flex; */
     flex-direction: column;
-    /* background: linear-gradient(
-        to left,
-        black 50%,
-        red 50% */
-    /* ); */
     background-color: #1f1d1d;
     background-image: url('https://www.plex.tv/wp-content/uploads/2021/04/plex-splash-screen-04-30-21-new-1440x810.png');
     background-repeat: no-repeat;
@@ -21,7 +15,6 @@ body {
 }
 
 .welcome {
-    /* background-color:rgba(54, 6, 8, .9); */
     background-color: black;
     border: 3px white;
     color: white;
@@ -39,7 +32,6 @@ body {
     font-size: 13.5pt;
 }
 
-/* background-color: #555555; */
 #mainEmbed {
     background-color: #242322;
     display: none;
@@ -161,54 +153,53 @@ body {
     border-style: outset;
     border-radius: 12px;
     margin-left: 20px;
-
 }
 
 #new-release-list {
     float: right;
     display: flex;
-   justify-content:right;
-   align-items: center;
-   align-content:flex-end;
-   height: 40px;
-   width: auto;
-   background-color:black;
-   border-color: white;
-   border-style: outset;
-   border-radius: 12px;
-   margin-left: 20px;
-   margin-bottom: 20px;
+    justify-content:right;
+    align-items: center;
+    align-content:flex-end;
+    height: 40px;
+    width: auto;
+    background-color:black;
+    border-color: white;
+    border-style: outset;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #oscar-list {
     float: right;
     display: flex;
-   justify-content:right;
-   align-items: center;
-   align-content:flex-end;
-   height: 40px;
-   width: auto;
-   background-color:black;
-   border-color: white;
-   border-style: outset;
-   border-radius: 12px;
-   margin-left: 20px;
-   margin-bottom: 20px;
+    justify-content:right;
+    align-items: center;
+    align-content:flex-end;
+    height: 40px;
+    width: auto;
+    background-color:black;
+    border-color: white;
+    border-style: outset;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #next-button {
     display: flex;
-   align-items: center;
-   text-align: center;
-   justify-content: center;
-   height: 50px;
-   width: auto;
-   background-color:black;
-   border-color: white;
-   border-style: outset;
-   border-radius: 12px;
-   margin: 15px 0px 15px 15px;
-   color: white;  
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 50px;
+    width: auto;
+    background-color:black;
+    border-color: white;
+    border-style: outset;
+    border-radius: 12px;
+    margin: 15px 0px 15px 15px;
+    color: white;  
 }
 
 button a {
@@ -271,7 +262,7 @@ header {
     height: 100px;
 }
 
- #index-2{
+#index-2{
     background-color: #1f1d1d;
     background-image: url('https://www.plex.tv/wp-content/uploads/2021/04/plex-splash-screen-04-30-21-new-1440x810.png');
     background-repeat: no-repeat;
@@ -295,7 +286,6 @@ header {
 
 #currentWatchlist a {
     font-size: 1.3em;
-    /* background-color: rgba(54, 6, 8, .75); */
 }
 
 #modalTriggerButton {
@@ -306,13 +296,3 @@ header {
 #currentWatchlist {
     color: white;
 }
-
-/* 
-header nav { 
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
- */
