@@ -1,5 +1,6 @@
 numberArray = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"];
 
+// this function initalizes the page with watchlist movies found from local storage
 function index2init() {
     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
     let WatchListPosterURL = JSON.parse(localStorage.getItem('localWatchListPosterURL')) || [];
@@ -18,9 +19,10 @@ function index2init() {
         document.getElementById("watchlistPosterCarousel").append(newMoviePosterCont);
     }
 };
+// call init function on page load
 index2init();
 
-
+// working on prototype clear button for watchlist movies. Starter code commented out below
 // document.getElementById('clearSearchBTN').addEventListener("click", function() {
 //     document.getElementById('currentWatchlist').empty();
 //     localStorage.removeItem("localWatchList");

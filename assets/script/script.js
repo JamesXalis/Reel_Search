@@ -10,6 +10,7 @@ let newReleases = ["Thor: Love and Thunder", "Black Phone", "Sound of Metal", "B
 let oscarWinners = ["CODA", "Nomadland", "Parasite", "Green Book", "The Shape of Water", "Moonlight", "Spotlight", "Birdman", "12 Years a Slave", "Argo", "The Artist", "The Kings Speech", "Slumdog Millionaire", "The Hurt Locker", "No Country for Old Men", "The Departed", "Million Dollar Baby", "Crash", "The Lord of the Rings: The Return of the King", "Chicago", "A Beautiful Mind", "Gladiator"
 ];
 
+// this function retrieves data from OMDB API and updates DOM accordingly
 function getMovieData(movie) {
     let requestUrl = `https://www.omdbapi.com/?apikey=b4b72294&t=${movie}`;
 
@@ -39,8 +40,8 @@ function getMovieData(movie) {
         });
 }
 
+// this function will run after movie data function runs, and will update the embedded video accordingly to the respective searched movie
 function youTubeSearch(video, date){
-    //requestUrl currently is running a search under 'matrix' that needs to be refrenced to what the user searches for ${searchTerm()}
     console.log(video)
     let requestUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${video}_${date}_trailer&key=AIzaSyDZFKj9BobzhlYLwGozMZCE8qgQgrIcWc0`;
 
@@ -58,6 +59,7 @@ function youTubeSearch(video, date){
     
 };
 
+// looks at source for embedded video and changes it on click
 function change (){
     if (document.getElementById("ytplayer").src=="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers") {
         document.getElementById("ytplayer").src ="https://www.youtube.com/embed/?listType=user_uploads&list=movietrailers&index=3"
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Carousel.init(elems);
 });
 
+// This is Search button will trigger the get movie function on search
 $searchButton.addEventListener("click", function() {
     if (!$movieInput.value.trim()) {
         $movieInput.value = '';
@@ -82,6 +85,7 @@ $searchButton.addEventListener("click", function() {
     document.getElementById('AddedMSG').setAttribute("style", "display:none");
 });
 
+// this will call search button function if "enter" is hit on keyboard instead
 document.getElementById("password").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -89,12 +93,14 @@ document.getElementById("password").addEventListener("keypress", function(event)
     }
 });
 
+// this will call getmovie function but supply an argument from the random movie array
 $randomButton.addEventListener('click', function(){
     let randMOV = randomMovies[Math.floor(Math.random()*randomMovies.length)]
     document.getElementById('AddedMSG').setAttribute("style", "display:none");
     getMovieData(randMOV);
 });
 
+// this will add current movie to local library and append to watchlist page later
 $wishlistButton.addEventListener('click', function(){
     let WatchList = JSON.parse(localStorage.getItem('localWatchList')) || [];
     let WatchListPosterURL = JSON.parse(localStorage.getItem('localWatchListPosterURL')) || [];
@@ -111,6 +117,7 @@ $wishlistButton.addEventListener('click', function(){
     localStorage.setItem('localWatchListPosterURL', JSON.stringify(WatchListPosterURL));
 });
 
+// script element from Materalized used for Modals
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);
